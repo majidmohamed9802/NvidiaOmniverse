@@ -1,0 +1,206 @@
+.analytics-dashboard {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  padding: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: hsl(var(--primary));
+  margin: 0 0 0.5rem 0;
+}
+
+.header-subtitle {
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter-section {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filter-controls select {
+  flex: 1;
+  max-width: 300px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.chart-card.chart-large {
+  grid-column: 1 / -1;
+}
+
+.chart-card h3 {
+  font-size: 1.1rem;
+  color: hsl(var(--foreground));
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.stock-table-section {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.stock-table-section h2 {
+  font-size: 1.5rem;
+  color: hsl(var(--primary));
+  margin: 0 0 1.5rem 0;
+}
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table th,
+.stock-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.stock-table th {
+  background: hsl(var(--muted));
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.stock-table td.slow-mover {
+  color: hsl(0, 72%, 51%);
+  font-weight: 600;
+}
+
+.stock-table td.normal {
+  color: hsl(var(--primary));
+  font-weight: 600;
+}
+
+.insights-section {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.insights-section h2 {
+  font-size: 1.5rem;
+  color: hsl(var(--primary));
+  margin: 0 0 1.5rem 0;
+}
+
+.insights-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.insights-table th,
+.insights-table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid hsl(var(--border));
+}
+
+.insights-table th {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 700;
+}
+
+.insights-table td {
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+}
+
+.assign-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid hsl(var(--border));
+}
+
+.assign-section label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+}
+
+.assign-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.assign-controls select {
+  flex: 1;
+  max-width: 400px;
+}
+
+@media (max-width: 1400px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .filter-controls {
+    flex-direction: column;
+  }
+  
+  .assign-controls {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,248 @@
+.analytics {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analytics-title {
+  font-size: 2rem;
+  color: #111827;
+  margin: 0 0 2rem 0;
+  font-weight: 700;
+}
+
+.analytics-controls {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.control-group label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.product-select,
+.period-select {
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.product-select:focus,
+.period-select:focus {
+  outline: none;
+  border-color: #8B4513;
+}
+
+.analyze-button {
+  padding: 0.75rem 2rem;
+  background: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.analyze-button:hover:not(:disabled) {
+  background: #A0522D;
+}
+
+.analyze-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.product-details-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.product-details-card h3 {
+  margin: 0 0 1rem 0;
+  color: #111827;
+  font-size: 1.3rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-label {
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.chart-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.chart-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #111827;
+  font-size: 1.2rem;
+}
+
+.insights-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.insights-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #111827;
+  font-size: 1.3rem;
+}
+
+.insight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.insight-analysis {
+  line-height: 1.8;
+  color: #374151;
+  font-size: 1.05rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #8B4513;
+}
+
+.recommendation-card {
+  background: #fef3c7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #f59e0b;
+}
+
+.recommendation-card h4 {
+  margin: 0 0 1rem 0;
+  color: #92400e;
+  font-size: 1.1rem;
+}
+
+.recommendation-action,
+.recommendation-reason {
+  margin-bottom: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.recommendation-action strong,
+.recommendation-reason strong {
+  color: #92400e;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.assign-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed #f59e0b;
+}
+
+.assign-section label {
+  display: block;
+  color: #92400e;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.assign-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.member-select {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #f59e0b;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.member-select:focus {
+  outline: none;
+  border-color: #92400e;
+}
+
+.assign-button {
+  padding: 0.75rem 2rem;
+  background: #0070C0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.assign-button:hover {
+  background: #005a9e;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,112,192,0.3);
+}
+
+@media (max-width: 768px) {
+  .analytics-controls {
+    flex-direction: column;
+  }
+
+  .analyze-button {
+    width: 100%;
+  }
+}
